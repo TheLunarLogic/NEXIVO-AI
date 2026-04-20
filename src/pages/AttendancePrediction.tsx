@@ -153,38 +153,9 @@ const AttendancePrediction = () => {
     return weightedAverage(items);
   }, [projections]);
 
-  const minProjected = useMemo(() => {
-    if (projections.length === 0) return 0;
-    return Math.min(...projections.map((p) => p.projectedPct));
-  }, [projections]);
-
   const linePoints = useMemo(
     () => trajectoryPoints(overallCurrent, overallProjected, 10),
     [overallCurrent, overallProjected],
-  );
-
-  const rings = useMemo(
-    () => [
-      {
-        label: "Weighted current",
-        value: overallCurrent,
-        color: "#00D4FF",
-        glow: "rgba(0,212,255,0.35)",
-      },
-      {
-        label: "Projected",
-        value: overallProjected,
-        color: "#6C63FF",
-        glow: "rgba(108,99,255,0.4)",
-      },
-      {
-        label: "Floor (min)",
-        value: minProjected,
-        color: "#FF6B6B",
-        glow: "rgba(255,107,107,0.35)",
-      },
-    ],
-    [overallCurrent, overallProjected, minProjected],
   );
 
   const updateRow = (id: string, patch: Partial<SubjectAttendanceRow>) => {
