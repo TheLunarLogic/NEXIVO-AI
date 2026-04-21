@@ -41,48 +41,6 @@ const features = [
     href: "/doc-chat",
   },
   {
-    title: "Attendance Prediction",
-    description:
-      "Plan sessions, leave days. Instantly see projections and animated charts.",
-    icon: "📊",
-    href: "/attendance",
-  },
-  {
-    title: "Smart Timetable",
-    description:
-      "Color-coded calendar with drag, sync, weekly and monthly views.",
-    icon: "🕒",
-    href: "/timetable",
-  },
-  {
-    title: "Assignment Solver",
-    description:
-      "Upload, scan worksheet; extract questions, view step-by-step answers instantly.",
-    icon: "📝",
-    href: "/assignment",
-  },
-  {
-    title: "Lab Experiments Solver",
-    description:
-      "Get instant code solutions and explanations for lab experiments online.",
-    icon: "💻",
-    href: "/lab",
-  },
-  {
-    title: "Document Summarizer",
-    description:
-      "Upload notes or PDFs, preview and generate AI summaries quickly.",
-    icon: "📄",
-    href: "/summarize",
-  },
-  {
-    title: "Topic Explainer",
-    description:
-      "Enter topic for structured overview with expandable examples and notes.",
-    icon: "🧠",
-    href: "/concepts",
-  },
-  {
     title: "Flow To Code",
     description:
       "Build a flowchart with drag-and-drop, then convert it into working code.",
@@ -390,8 +348,8 @@ const Home = () => {
               </span>
             </h2>
             <p className="mt-3 text-slate-300">
-              Ten powerful tools in one glass-smooth interface—each tuned for how students
-              actually work.
+              Powerful tools in one glass-smooth interface—each tuned for how students actually
+              work.
             </p>
           </motion.div>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">

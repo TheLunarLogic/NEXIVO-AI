@@ -400,65 +400,12 @@ body {
   box-shadow: 0 0 24px rgba(108, 99, 255, 0.2);
 }
 
-/* Attendance prediction — glowing progress */
-.attendance-glow-progress .attendance-progress-fill {
-  box-shadow:
-    0 0 14px rgba(0, 212, 255, 0.35),
-    0 0 28px rgba(108, 99, 255, 0.2);
-}
-
-.attendance-chart-bar {
-  min-width: 4px;
-  transition: box-shadow 0.25s ease;
-}
-
-.attendance-chart-bar:hover {
-  filter: brightness(1.08);
-}
-
-/* Document summarizer */
-.summarizer-dropzone:focus-visible {
-  outline: 2px solid rgba(0, 212, 255, 0.5);
-  outline-offset: 2px;
-}
-
-
-
-.summarizer-progress-fill {
-  box-shadow:
-    0 0 16px rgba(108, 99, 255, 0.45),
-    0 0 28px rgba(0, 212, 255, 0.25);
-}
-
-/* Assignment solver */
-.assignment-dropzone:focus-visible {
-  outline: 2px solid rgba(108, 99, 255, 0.5);
-  outline-offset: 2px;
-}
-
-
-
-.ocr-scan-line {
-  box-shadow: 0 0 24px rgba(0, 212, 255, 0.6);
-}
-
-/* Programming lab */
-
-
-.programming-editor-shell pre {
-  background: #0d1117 !important;
-}
-
 /* Document chat */
 
 
 .doc-chat-scroll {
   scrollbar-color: rgba(108, 99, 255, 0.35) transparent;
 }
-
-/* Concept explainer */
-
-
 /* Quiz & flashcards */
 
 

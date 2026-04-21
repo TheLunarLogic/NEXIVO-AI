@@ -5,13 +5,7 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Dashboard from "./pages/Dashboard";
-import Timetable from "./pages/Timetable";
-import AttendancePrediction from "./pages/AttendancePrediction";
-import DocumentSummarizer from "./pages/DocumentSummarizer";
-import AssignmentSolver from "./pages/AssignmentSolver";
-import ProgrammingLab from "./pages/ProgrammingLab";
 import DocumentChat from "./pages/DocumentChat";
-import ConceptExplanation from "./pages/ConceptExplanation";
 import StudyQuiz from "./pages/StudyQuiz";
 import ResumeBuilderV2 from "./pages/ResumeBuilderV2";
 import JobFinder from "./pages/JobFinder";
@@ -29,14 +23,8 @@ const AnimatedRoutes = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/timetable" element={<Timetable />} />
-        <Route path="/attendance" element={<AttendancePrediction />} />
-        <Route path="/summarize" element={<DocumentSummarizer />} />
-        <Route path="/assignment" element={<AssignmentSolver />} />
-        <Route path="/lab" element={<ProgrammingLab />} />
         <Route path="/doc-chat" element={<DocumentChat />} />
         <Route path="/roadmap" element={<Roadmap />} />
-        <Route path="/concepts" element={<ConceptExplanation />} />
         <Route path="/study" element={<StudyQuiz />} />
         <Route path="/resume" element={<ResumeBuilderV2 />} />
         <Route path="/jobs" element={<JobFinder />} />

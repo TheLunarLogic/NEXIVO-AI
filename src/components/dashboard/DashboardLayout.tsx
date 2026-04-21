@@ -15,19 +15,6 @@ const navItems = [
     ),
   },
   {
-    id: "planner",
-    label: "Planner",
-    href: "/timetable",
-    icon: (
-      <>
-        <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
-        <line x1="16" y1="2" x2="16" y2="6" />
-        <line x1="8" y1="2" x2="8" y2="6" />
-        <line x1="3" y1="10" x2="21" y2="10" />
-      </>
-    ),
-  },
-  {
     id: "courses",
     label: "Courses",
     href: "/dashboard#courses",
@@ -35,43 +22,6 @@ const navItems = [
       <>
         <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
         <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
-      </>
-    ),
-  },
-  {
-    id: "attendance",
-    label: "Attendance",
-    href: "/attendance",
-    icon: (
-      <>
-        <path d="M12 20v-6" />
-        <path d="M6 20v-4" />
-        <path d="M18 20v-8" />
-        <path d="M6 16H4V2h16v14h-2" />
-        <path d="M10 6h4v4h-4z" />
-      </>
-    ),
-  },
-  {
-    id: "assignment",
-    label: "Solver",
-    href: "/assignment",
-    icon: (
-      <>
-        <path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3Z" />
-        <path d="M12 12l8-4.5M12 12v9M12 12L4 7.5" />
-      </>
-    ),
-  },
-  {
-    id: "lab",
-    label: "Lab",
-    href: "/lab",
-    icon: (
-      <>
-        <polyline points="16 18 22 12 16 6" />
-        <polyline points="8 6 2 12 8 18" />
-        <line x1="12" y1="2" x2="12" y2="22" />
       </>
     ),
   },
@@ -88,17 +38,6 @@ const navItems = [
     ),
   },
   {
-    id: "summarize",
-    label: "Summarize",
-    href: "/summarize",
-    icon: (
-      <>
-        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-        <path d="M14 2v6h6M16 13H8M16 17H8M10 9H8" />
-      </>
-    ),
-  },
-  {
     id: "docchat",
     label: "Doc chat",
     href: "/doc-chat",
@@ -106,17 +45,6 @@ const navItems = [
       <>
         <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
         <path d="M13 8H7M17 12H7" />
-      </>
-    ),
-  },
-  {
-    id: "concept",
-    label: "Concepts",
-    href: "/concepts",
-    icon: (
-      <>
-        <path d="M12 3a7 7 0 0 1 7 7c0 3-2 5.5-4 6.5V17a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-.5C7 15.5 5 13 5 10a7 7 0 0 1 7-7z" />
-        <path d="M9 21h6M10 18h4" />
       </>
     ),
   },
@@ -185,19 +113,13 @@ type DashboardLayoutProps = {
 };
 
 function activeIdFromHash(hash: string): (typeof navItems)[number]["id"] {
-  if (hash === "#planner") return "planner";
   if (hash === "#courses") return "courses";
   if (hash === "#ai") return "ai";
   if (hash === "#settings") return "settings";
-  if (hash === "#attendance") return "attendance";
-  if (hash === "#summarize") return "summarize";
   if (hash === "#docchat") return "docchat";
-  if (hash === "#concepts") return "concept";
   if (hash === "#study") return "study";
   if (hash === "#resume") return "resume";
   if (hash === "#jobs") return "jobs";
-  if (hash === "#assignment") return "assignment";
-  if (hash === "#lab") return "lab";
   return "overview";
 }
 
@@ -216,29 +138,17 @@ export const DashboardLayout = ({ children }: DashboardLayoutProps) => {
     navigate("/#features");
   };
   const activeNav =
-    pathname === "/timetable"
-      ? "planner"
-      : pathname === "/attendance"
-        ? "attendance"
-        : pathname === "/summarize"
-          ? "summarize"
-          : pathname === "/doc-chat"
-            ? "docchat"
-            : pathname === "/concepts"
-              ? "concept"
-              : pathname === "/study"
-                ? "study"
-                : pathname === "/resume"
-                  ? "resume"
-                  : pathname === "/jobs"
-                    ? "jobs"
-                  : pathname === "/assignment"
-                    ? "assignment"
-                    : pathname === "/lab"
-                      ? "lab"
-                      : pathname === "/flow-to-code"
-                        ? "flowchart"
-                        : activeIdFromHash(hash);
+    pathname === "/doc-chat"
+      ? "docchat"
+      : pathname === "/study"
+        ? "study"
+        : pathname === "/resume"
+          ? "resume"
+          : pathname === "/jobs"
+            ? "jobs"
+            : pathname === "/flow-to-code"
+              ? "flowchart"
+              : activeIdFromHash(hash);
 
   return (
     <div className="dashboard-root relative min-h-screen overflow-x-hidden bg-[linear-gradient(165deg,#0B1220_0%,#020617_42%,#0a1428_100%)] text-white">
